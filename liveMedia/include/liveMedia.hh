@@ -30,6 +30,7 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
 #include "MPEG4ESVideoRTPSink.hh"
 #include "AMRAudioFileSink.hh"
 #include "H264VideoFileSink.hh"
+#include "H265VideoFileSink.hh"
 #include "BasicUDPSink.hh"
 #include "GSMAudioRTPSink.hh"
 #include "H263plusVideoRTPSink.hh"

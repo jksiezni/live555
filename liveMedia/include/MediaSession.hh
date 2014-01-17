@@ -231,6 +231,10 @@ public:
   unsigned fmtp_streamstateindication() const { return fStreamstateindication; }
   unsigned fmtp_streamtype() const { return fStreamtype; }
   unsigned fmtp_spropdepackbufnalus() const { return fSpropDepackBufNalus; }
+  unsigned fmtp_profilespace() const { return fProfileSpace; }
+  unsigned fmtp_profileid() const { return fProfileId; }
+  unsigned fmtp_tierflag() const { return fTierFlag; }
+  unsigned fmtp_levelid() const { return fLevelId; }
   Boolean fmtp_cpresent() const { return fCpresent; }
   Boolean fmtp_randomaccessindication() const { return fRandomaccessindication; }
   char const* fmtp_config() const { return fConfig; }
@@ -243,6 +247,7 @@ public:
   char const* fmtp_spropvps() const { return fSpropVPS; }
   char const* fmtp_spropsps() const { return fSpropSPS; }
   char const* fmtp_sproppps() const { return fSpropPPS; }
+  char const* fmtp_interopconstraintsstr() const { return fInteropConstraintsStr; }
 
   netAddressBits connectionEndpointAddress() const;
       // Converts "fConnectionEndpointName" to an address (or 0 if unknown)
@@ -324,10 +329,11 @@ protected:
   unsigned fIndexdeltalength, fIndexlength, fInterleaving;
   unsigned fMaxdisplacement, fObjecttype;
   unsigned fOctetalign, fProfile_level_id, fRobustsorting;
-  unsigned fSizelength, fStreamstateindication, fStreamtype, fSpropDepackBufNalus;
+  unsigned fSizelength, fStreamstateindication, fStreamtype;
+  unsigned fSpropDepackBufNalus, fProfileSpace, fProfileId, fTierFlag, fLevelId;
   Boolean fCpresent, fRandomaccessindication;
-  char *fConfig, *fMode, *fSpropParameterSets, *fEmphasis, *fChannelOrder,
-    *fTxMode, *fSpropVPS, *fSpropSPS, *fSpropPPS;
+  char *fConfig, *fMode, *fSpropParameterSets, *fEmphasis, *fChannelOrder;
+  char *fTxMode, *fSpropVPS, *fSpropSPS, *fSpropPPS, *fInteropConstraintsStr;
 
   double fPlayStartTime;
   double fPlayEndTime;
